@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fundo:#0D1017; --fundo-suave:#171C26; --acento:#777AAD; --acento-forte:#8F91BF;
+    --borda:#272E3B; --texto:#EDEEF6; --texto-corpo:#C4C7D6; --texto-suave:#8F94A8;
+    --mono:'JetBrains Mono',monospace; --corpo:'Inter','Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px;overflow:hidden}
+  body{background:var(--fundo);font-family:var(--corpo);color:var(--texto);
+       display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  .barra{height:14px;background:linear-gradient(90deg,var(--acento),var(--acento-forte),var(--acento));flex:none}
+  .conteudo{flex:1;display:flex;flex-direction:column;padding:76px 84px 74px}
+  .olho{font-family:var(--mono);font-size:31px;font-weight:700;color:var(--acento);
+        letter-spacing:.16em;text-transform:uppercase}
+  h1{margin-top:38px;font-size:94px;line-height:1.04;font-weight:700;letter-spacing:-.032em}
+  .grade{
+    margin-top:42px;
+    display:grid;grid-template-columns:1fr 1fr;gap:26px;
+  }
+  .cel{
+    background:var(--fundo-suave);border:1px solid var(--borda);border-radius:20px;
+    padding:26px 32px 24px;
+  }
+  .cel .num{
+    font-family:var(--mono);font-size:100px;font-weight:700;line-height:1;
+    letter-spacing:-.045em;color:var(--texto);
+  }
+  .cel .rot{
+    margin-top:12px;font-family:var(--mono);font-size:27px;font-weight:500;
+    color:var(--texto-suave);letter-spacing:.05em;
+  }
+  .corpo{margin-top:42px;font-size:35px;line-height:1.5;color:var(--texto-corpo);max-width:900px}
+  .corpo strong{color:var(--texto);font-weight:600}
+  .pe{margin-top:auto;padding-top:42px;border-top:1px solid var(--borda);
+      display:flex;align-items:center;justify-content:space-between}
+  .pe .url{font-family:var(--mono);font-size:21px;font-weight:700;color:var(--acento-forte);
+           white-space:nowrap;flex:none}
+  .pe .tag{font-family:var(--mono);font-size:20px;font-weight:500;color:var(--texto-suave);
+           letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex:none}
+</style>
+</head>
+<body>
+  <div class="barra"></div>
+  <div class="conteudo">
+    <div class="olho">// opencode-agents</div>
+
+    <h1>Meu método<br>escrito como<br>código.</h1>
+
+    <div class="grade">
+      <div class="cel"><div class="num">24</div><div class="rot">regras</div></div>
+      <div class="cel"><div class="num">117</div><div class="rot">skills</div></div>
+      <div class="cel"><div class="num">35</div><div class="rot">agentes</div></div>
+      <div class="cel"><div class="num">71</div><div class="rot">comandos</div></div>
+    </div>
+
+    <p class="corpo">O <strong>AGENTS.md</strong> escolhe sozinho o que roda em cada fase: teste quando entra lógica nova, review antes do PR, reaproveitar antes de escrever de novo.</p>
+
+    <div class="pe">
+      <div class="url">github.com/adrianoanthonymma16-boop/opencode-agents</div>
+      <div class="tag">MIT · JavaScript</div>
+    </div>
+  </div>
+</body>
+</html>

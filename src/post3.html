@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fundo:#0D1017; --fundo-suave:#171C26; --acento:#777AAD; --acento-forte:#8F91BF;
+    --borda:#272E3B; --texto:#EDEEF6; --texto-corpo:#C4C7D6; --texto-suave:#8F94A8;
+    --mono:'JetBrains Mono',monospace; --corpo:'Inter','Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px;overflow:hidden}
+  body{background:var(--fundo);font-family:var(--corpo);color:var(--texto);
+       display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  .barra{height:14px;background:linear-gradient(90deg,var(--acento),var(--acento-forte),var(--acento));flex:none}
+  .conteudo{flex:1;display:flex;flex-direction:column;padding:76px 84px 74px}
+  .olho{font-family:var(--mono);font-size:31px;font-weight:700;color:var(--acento);
+        letter-spacing:.16em;text-transform:uppercase}
+  .numero{
+    margin-top:44px;
+    font-family:var(--mono);
+    font-size:330px;
+    font-weight:700;
+    line-height:.86;
+    letter-spacing:-.06em;
+    color:var(--acento-forte);
+  }
+  .rotulo{
+    margin-top:34px;
+    font-size:56px;font-weight:700;line-height:1.16;letter-spacing:-.025em;
+    color:var(--texto);
+  }
+  .corpo{margin-top:56px;font-size:35px;line-height:1.5;color:var(--texto-corpo)}
+  .citacao{
+    margin-top:46px;
+    padding-left:32px;
+    border-left:5px solid var(--acento);
+    font-size:44px;font-weight:600;line-height:1.28;letter-spacing:-.015em;
+    color:var(--texto);
+  }
+  .pe{margin-top:auto;padding-top:42px;border-top:1px solid var(--borda);
+      display:flex;align-items:center;justify-content:space-between}
+  .pe .url{font-family:var(--mono);font-size:25px;font-weight:700;color:var(--acento-forte);
+           white-space:nowrap;flex:none}
+  .pe .tag{font-family:var(--mono);font-size:23px;font-weight:500;color:var(--texto-suave);
+           letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex:none}
+</style>
+</head>
+<body>
+  <div class="barra"></div>
+  <div class="conteudo">
+    <div class="olho">// arquitetura</div>
+
+    <div class="numero">16</div>
+    <div class="rotulo">bugs para separar<br>a regra da interface.</div>
+
+    <p class="corpo">A regra tinha vazado pra dentro da camada visual. Separei <b>services/</b> de <b>ui/</b> e trocar de biblioteca de interface deixou de tocar na lógica.</p>
+
+    <div class="citacao">A interface não<br>decide nada.</div>
+
+    <div class="pe">
+      <div class="url">github.com/adrianoanthonymma16-boop/autodoc</div>
+      <div class="tag">autodoc</div>
+    </div>
+  </div>
+</body>
+</html>
