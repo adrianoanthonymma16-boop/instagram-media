@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fundo:#0D1017;
+    --fundo-suave:#171C26;
+    --acento:#777AAD;
+    --acento-forte:#8F91BF;
+    --borda:#272E3B;
+    --texto:#EDEEF6;
+    --texto-corpo:#C4C7D6;
+    --texto-suave:#8F94A8;
+    --mono:'JetBrains Mono',monospace;
+    --corpo:'Inter','Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1350px;overflow:hidden}
+  body{
+    background:var(--fundo);
+    font-family:var(--corpo);
+    color:var(--texto);
+    display:flex;flex-direction:column;
+    -webkit-font-smoothing:antialiased;
+  }
+  .barra{height:14px;background:linear-gradient(90deg,var(--acento),var(--acento-forte),var(--acento));flex:none}
+  .conteudo{flex:1;display:flex;flex-direction:column;padding:76px 84px 74px}
+  .olho{
+    font-family:var(--mono);font-size:31px;font-weight:700;
+    color:var(--acento);letter-spacing:.16em;text-transform:uppercase;
+  }
+  h1{margin-top:50px;font-size:104px;line-height:1.04;font-weight:700;letter-spacing:-.032em}
+  .painel{
+    margin-top:56px;
+    background:var(--fundo-suave);
+    border:1px solid var(--borda);
+    border-radius:20px;
+    padding:38px 40px;
+  }
+  .linha{
+    display:flex;align-items:baseline;gap:26px;
+    font-family:var(--mono);font-size:34px;font-weight:500;
+    padding:17px 0;
+  }
+  .linha + .linha{border-top:1px solid var(--borda)}
+  .marca{color:var(--acento-forte);font-weight:700;flex:none;width:34px}
+  .erro{color:var(--texto)}
+  .nota{color:var(--texto-suave);font-size:26px}
+  .corpo{margin-top:52px;font-size:35px;line-height:1.5;color:var(--texto-corpo)}
+  .corpo strong{color:var(--texto);font-weight:600}
+  .pe{
+    margin-top:auto;padding-top:42px;border-top:1px solid var(--borda);
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .pe .url{font-family:var(--mono);font-size:25px;font-weight:700;color:var(--acento-forte);letter-spacing:.01em;white-space:nowrap;flex:none}
+  .pe .tag{font-family:var(--mono);font-size:23px;font-weight:500;color:var(--texto-suave);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex:none}
+</style>
+</head>
+<body>
+  <div class="barra"></div>
+  <div class="conteudo">
+    <div class="olho">// autodoc</div>
+
+    <h1>Três erros que<br>o AutoDoc não<br>deixa passar.</h1>
+
+    <div class="painel">
+      <div class="linha"><span class="marca">x</span><span class="erro">CPF com dígito errado</span></div>
+      <div class="linha"><span class="marca">x</span><span class="erro">data invertida</span></div>
+      <div class="linha"><span class="marca">x</span><span class="erro">e-mail sem arroba</span></div>
+    </div>
+
+    <p class="corpo"><strong>Validação na entrada</strong>, antes de virar objeto de domínio.<br>
+    E <strong>nada sai da sua máquina</strong>: sem upload, sem nuvem.</p>
+
+    <div class="pe">
+      <div class="url">github.com/adrianoanthonymma16-boop/autodoc</div>
+      <div class="tag">v4.0 · MIT</div>
+    </div>
+  </div>
+</body>
+</html>
